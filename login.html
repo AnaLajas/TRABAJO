@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="cookies.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /*Con display inline-box se pone en línea pero nos permite dar un ancho
+        ya que con display inline no nos permite darle ancho*/
+
+        #contenedor {
+            width: 300px;
+            margin: 0 auto;
+            margin-top: 100px;
+        }
+
+        label {
+            display: inline-block;
+            width: 37%;
+        }
+
+        #contenedor div {
+            margin: 8px 4px;
+        }
+
+        fieldset {
+            border-radius: 4px;
+            background-color: bisque;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="contenedor">
+        <form name="login" action="comprobarusuario.php" method="POST">
+            <fieldset>
+                <legend>Login</legend>
+                <div>
+                    <label for="usuario">Usuario:</label>
+                    <!--Con required obligamos a que sea un campo requerido y con autofocus
+                        es para que se ponga el foco directamente en este input-->
+                    <input required autofocus id="usuario" name="usuario" type="text" size="12" maxlength="20">
+
+                </div>
+                <div>
+                    <label for="clave">Contraseña:</label>
+                    <input required id="clave" name="clave" type="password" size="12" maxlength="20">
+
+                </div>
+                <div>
+                    <label for="recuerdo">Recuérdame:</label>
+                    <input id="recuerdo" name="recuerdo" type="checkbox">
+
+                </div>
+                <div>
+                    <input id="entrar" type="submit" value="enviar">
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>
