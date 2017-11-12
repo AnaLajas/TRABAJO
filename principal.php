@@ -27,6 +27,14 @@ para pasar los datos de un script a otro.
 bidimesional: filas y columnas*/
 
 
+//iniciamos sesión:
+session_start();
+
+echo "<p>Esta es la página principal</p>";
+
+echo "<div><p>Nombre: " .$_SESSION['nombre'].  "</p></div>";
+
+
 
 
 
