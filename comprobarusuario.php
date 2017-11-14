@@ -28,7 +28,9 @@ function comprobarDatos($usuario,$clave,$USUARIOS){
 				//iniciamos la sesión:
 				session_start();
 				$_SESSION['nombre']=$usuario;
-				header('Location: principal.html');
+				/*crear una cookie con la fecha*/
+			    setcookie("fecha", date("d/m/Y H:i:s"), time()+3600);
+				header('Location: principal.php');
 			}
 		}
 	}

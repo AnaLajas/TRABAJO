@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+
+<?php
+    //iniciamos sesión:
+    session_start();
+?>
+
 <html lang="es">
 
 <head>
@@ -72,18 +78,19 @@
 </head>
 
 <body background='fondo.jpg'>
+
+    <!-- TODO: HACER HEADER-->
+
     <h1>Menú principal</h1>
     <div id="contenedor">
-        <div id="uno"><a href='opcion1menu.html'>Listado de las calificaciones por curso</a></div>
+        <a href='opcion1menu.html'><div id="uno">Listado de las calificaciones por curso</div></a>
         <div id="dos"><a href='opcion2menu.html'>Listado de todos los cursos con su nota media</a></div>
         <div id="tres"><a href='opcion3menu.html'>Modificaciones de notas</a></div>
         <div id="cuatro"><a href='opcion4menu.html'>Listado de usuarios ordenados por fecha de acceso</a></div>
     </div>
 
     <?php
-    //iniciamos sesión:
-    session_start();
-    echo "<div><p>Usuario: " .$_SESSION['nombre']. "</p> <p>   Hora de acceso: " .$_SESSION['fecha']. "</p></div>";
+    echo "<div><p>Usuario: " .$_SESSION['nombre']. "</p> <p>   Hora de acceso: " /*.$_SESSION['fecha']*/. "</p></div>";
     ?>
 </body>
 

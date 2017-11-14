@@ -11,8 +11,4 @@
         1 => array("usuario" =>"ana", "clave" => 2406)
     );
 
-/*crear una cookie con la fecha*/
-    session_start();
-    setcookie("fecha", date("d/m/Y H:i:s"), time()+3600);
-
 ?>
