@@ -20,18 +20,22 @@ function comprobarDatos($usuario,$clave,$USUARIOS){
 			$usuarioEncontrado = true;
 			if ($clave != $USUARIOS[$indice]["clave"]){
 				echo"<p>La contraseña introducida es incorrecta</p>";
+				//AÑADIR UN ENLACE PARA VOLVER AL FORMULARIO
+				echo "<a href='login.html'>". "Volver". "</a>";
 			} else {
 				echo"<p>Adelante, los datos introducidos son correctos</p>";
 				//ahora iniciaría sesión y le llevaríamos a otra página (principal):
 				//iniciamos la sesión:
 				session_start();
 				$_SESSION['nombre']=$usuario;
-				header('Location: principal.php');
+				header('Location: principal.html');
 			}
 		}
 	}
 	if ($usuarioEncontrado == false) {
 		echo"<p>No estás registrado como usuario</p>";
+		//AÑADIR UN ENLACE PARA VOLVER AL FORMULARIO
+		echo "<a href='login.html'>"."Volver"."</a>";
 	}	
 }
 

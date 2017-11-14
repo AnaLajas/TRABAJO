@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Listado de las calificaciones por curso</title>
+    <style>
+        #boton {
+            float: right;
+            padding: 3px;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+
+<body background='fondo.jpg'>
+    <h2>Escoge el curso que está actualmente cursando</h2>
+    <form>
+        <fieldset>
+            <legend>Curso: </legend>
+
+            <label for="curso">Primero</label>
+            <input type="radio" id="primero" name="curso" checked>
+
+            <label for="curso">Segundo</label>
+            <input type="radio" id="segundo" name="curso">
+
+            <label for="curso">Tercero</label>
+            <input type="radio" id="tercero" name="curso">
+
+        </fieldset>
+        <br>
+        <input id="boton" type="submit" value="Enviar">
+        <input id="boton" type="reset" value="Borrar">
+    </form>
+</body>
+
+</html>

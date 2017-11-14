@@ -5,60 +5,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <script src="cookies.js"></script>
+    <title>Login</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        /*Con display inline-box se pone en línea pero nos permite dar un ancho
-        ya que con display inline no nos permite darle ancho*/
 
-        #contenedor {
-            width: 300px;
+        form {
+            /* Sólo para centrar el formulario a la página */
             margin: 0 auto;
             margin-top: 100px;
+            width: 380px;
+            /* Para ver el borde del formulario */
+            padding: 1em;
+            border: 2px solid black;
+            border-radius: 1em;
+            background-color: #D5DBDB;
+        }
+
+        body {
+            background-color: #E1EAF1;
+        }
+
+        h1 {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        p {
+            margin-top: 10px;
+            font-size: 80%;
+            color: black;
         }
 
         label {
-            display: inline-block;
-            width: 37%;
+            padding: 15px;
         }
 
-        #contenedor div {
-            margin: 8px 4px;
+        #usuario {
+            float: right;
+            margin-right: 15px;
         }
 
-        fieldset {
-            border-radius: 4px;
-            background-color: bisque;
+        #clave {
+            float: right;
+            margin-right: 15px;
+        }
+
+        #boton {
+            padding: 2px;
+            float: right;
+            background-color: #F2F3F4;
         }
     </style>
 </head>
 
-<body>
+<body background="fondo.jpg">
     <div id="contenedor">
+        <h1>IES ÁGORA</h1>
+        <h2>Para acceder al contenido de la página principal, rellene los siguientes campos</h2>
         <form name="login" action="comprobarusuario.php" method="POST">
+            <br>
             <fieldset>
-                <legend>Login</legend>
-                <div>
-                    <label for="usuario">Usuario:</label>
-                    <!--Con required obligamos a que sea un campo requerido y con autofocus
-                        es para que se ponga el foco directamente en este input-->
-                    <input required autofocus id="usuario" name="usuario" type="text" size="12" maxlength="20">
-
-                </div>
-                <div>
-                    <label for="clave">Contraseña:</label>
-                    <input required id="clave" name="clave" type="password" size="12" maxlength="20">
-
-                </div>
-                <div>
-                    <input id="entrar" type="submit" value="enviar">
-                </div>
+                <legend>
+                    <h4> Introducir: </h4>
+                </legend>
+                <br>
+                <!-- Campo de texto uno -->
+                <label for="usuario">Usuario(*)</label>
+                <input required autofocus id="usuario" name="usuario" type="text" size="23" maxlength="20"><br>
+                <br>
+                <!-- Campo de texto dos -->
+                <label for="clave">Contraseña(*)</label>
+                <input required id="clave" name="clave" type="password" size="23" maxlength="20"><br>
+                <br>
             </fieldset>
+            <!-- poner un mensaje aquí: -->
+            <p>(*) Es obligatorio rellenar todos los campos para acceder al contenido de la página.</p>
+            <br>
+            <!-- Botones -->
+            <input id="boton" type="submit" value="Enviar">
+            <input id="boton" type="reset" value="Borrar">
+
         </form>
     </div>
 </body>

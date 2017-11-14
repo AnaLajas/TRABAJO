@@ -7,13 +7,12 @@
         );
 /* tabla usuarios */
     $USUARIOS = array (
-        0 => array("usuario" =>"guapo", "clave" => 4444),
-        1 => array("usuario" =>"alajaspa", "clave" => 2406)
+        0 => array("usuario" =>"jesus", "clave" => 4444),
+        1 => array("usuario" =>"ana", "clave" => 2406)
     );
 
-
-//hola guaperas
-
-
+/*crear una cookie con la fecha*/
+    session_start();
+    setcookie("fecha", date("d/m/Y H:i:s"), time()+3600);
 
 ?>
