@@ -19,8 +19,8 @@
 
         #uno {
             background-color: white;
-            border: 1px solid black;
-            padding: .2em;
+            border: 2px solid black;
+            padding: .3em;
             width: 200px;
             margin: 0 auto;
             color: black;
@@ -31,8 +31,8 @@
 
         #dos {
             background-color: white;
-            border: 1px solid black;
-            padding: .2em;
+            border: 2px solid black;
+            padding: .3em;
             width: 200px;
             margin: 0 auto;
             text-align: center;
@@ -42,8 +42,8 @@
 
         #tres {
             background-color: white;
-            border: 1px solid black;
-            padding: .2em;
+            border: 2px solid black;
+            padding: .3em;
             width: 200px;
             margin: 0 auto;
             text-align: center;
@@ -53,8 +53,8 @@
 
         #cuatro {
             background-color: white;
-            border: 1px solid black;
-            padding: .2em;
+            border: 2px solid black;
+            padding: .3em;
             width: 200px;
             margin: 0 auto;
             text-align: center;
@@ -78,20 +78,21 @@
 </head>
 
 <body background='fondo.jpg'>
-
-    <!-- TODO: HACER HEADER-->
+    <header>
+    <?php
+    echo "<div style='filter:alpha(opacity=20); opacity:0.6;background:white;color:black;'><p>Usuario: " .$_SESSION['nombre']. "</p> <p>Hora de acceso: " /*.$_SESSION['fecha']*/. "</p></div>";
+    ?>
+    </header>
 
     <h1>Menú principal</h1>
     <div id="contenedor">
-        <a href='opcion1menu.html'><div id="uno">Listado de las calificaciones por curso</div></a>
-        <div id="dos"><a href='opcion2menu.html'>Listado de todos los cursos con su nota media</a></div>
-        <div id="tres"><a href='opcion3menu.html'>Modificaciones de notas</a></div>
-        <div id="cuatro"><a href='opcion4menu.html'>Listado de usuarios ordenados por fecha de acceso</a></div>
+        <a href='opcion1menu.php'><div id="uno">Listado de las calificaciones por curso</div></a>
+        <a href='opcion2menu.php'><div id="dos">Listado de todos los cursos con su nota media</div></a>
+        <a href='opcion3menu.php'><div id="tres">Modificaciones de notas</div></a>
+        <a href='opcion4menu.php'><div id="cuatro">Listado de usuarios ordenados por fecha de acceso</div></a>
     </div>
 
-    <?php
-    echo "<div><p>Usuario: " .$_SESSION['nombre']. "</p> <p>   Hora de acceso: " /*.$_SESSION['fecha']*/. "</p></div>";
-    ?>
+
 </body>
 
 </html>

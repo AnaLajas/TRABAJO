@@ -10,25 +10,34 @@
         #boton {
             float: right;
             padding: 3px;
-            border-radius: 2px;
+            border-radius: 4px;
         }
     </style>
 </head>
+<?php
+//iniciamos sesión:
+    session_start();
+?>
 
-<body background='fondo.jpg'>
+<body background='fondo3.jpg'>
+    <header>
+        <?php
+            echo "<header><div style='filter:alpha(opacity=20); opacity:0.6;background:white;color:black;'><p>El usuario: " .$_SESSION['nombre']. " , ha accedido: " /*.$_SESSION['fecha']*/. "</p></div></header>";
+        ?>
+    </header>
     <h2>Escoge el curso que está actualmente cursando</h2>
-    <form>
+    <form action="respuestaopcion1.php" method="POST">
         <fieldset>
             <legend>Curso: </legend>
 
             <label for="curso">Primero</label>
-            <input type="radio" id="primero" name="curso" checked>
+            <input type="radio" name="curso" value="1">
 
             <label for="curso">Segundo</label>
-            <input type="radio" id="segundo" name="curso">
+            <input type="radio" name="curso" value="2" checked>
 
             <label for="curso">Tercero</label>
-            <input type="radio" id="tercero" name="curso">
+            <input type="radio" name="curso" value "3">
 
         </fieldset>
         <br>
