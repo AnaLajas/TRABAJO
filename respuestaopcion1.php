@@ -18,6 +18,10 @@
         /* recorrer los cursos y pintar nombre y notas de los alumnos */
         echo "<div style='text-align:center; border: 2px solid black; border-radius: 8px; background-color:white; width:500px; height:300px; margin:100px auto; '>";
         echo "<p>Listado de los alumnos que están cursando: " .$_POST['curso']. "</p>";
+
+        //PROBLEMA AQUÍ QUE SE SOLUCIONARÁ --> Cambiarlo por un Foreach. El error es que los expedientes no tienen por qué ir en orden empezando por cero (no tiene mucho sentido, aunque nos funcionaba porque lo habíamos dejado así nosotros preparado). Por ejemplo, podría pasar que sólo hubiese un alumno, con el expediente 4. Haríamos un for desde 0 hasta 1 (es decir, valdría $índice el valor 0 en la única vuelta que da, pero nunca sacaríamos a ese alumno, porque el expediente 0 no existe, nos daría un error).
+        //Con el forech en el ejemplo anterior sería algo parecido a --> foreach($alumno as $fila) lo que haríamos es recorrer cada fila (alumno), entonces funciona aunque el índice del alumno en el ejemplo (su expediente) sea 4.
+
         for ($indice=0; $indice<count($ALUMNOS); $indice++) {
             if ($ALUMNOS[$indice]['curso'] == $_POST['curso']) {
                 echo "<p>Nombre alumno: -> ".$ALUMNOS[$indice]['nombre']."</p>";
