@@ -12,6 +12,9 @@
             padding: 3px;
             border-radius: 4px;
         }
+        p {
+            margin: 0 auto;
+        }
     </style>
 </head>
 <?php
@@ -21,9 +24,10 @@
 
 <body background='fondo3.jpg'>
     <header>
+
         <?php
-            echo "<header><div style='filter:alpha(opacity=20); opacity:0.6;background:white;color:black;'><p>El usuario: " .$_SESSION['nombre']. " , ha accedido: " /*.$_SESSION['fecha']*/. "</p></div></header>";
-        ?>
+    echo "<div style='filter:alpha(opacity=20); opacity:0.6;background:white;color:black;'><p>Usuario: " .$_SESSION['nombre']. "</p> <p>Hora de acceso: " /*.$_SESSION['fecha']*/. "</p></div>";
+    ?>
     </header>
     <h2>Escoge el curso que está actualmente cursando</h2>
     <form action="respuestaopcion1.php" method="POST">
