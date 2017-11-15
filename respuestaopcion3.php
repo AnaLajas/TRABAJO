@@ -14,26 +14,27 @@ echo "<div style='text-align:center; border: 2px solid black; border-radius: 8px
 
 // 1)Comprobar si existe el alumno con ese expediente.
 $existe=false;
-$expAModificar = $_POST['numexp'];
+$expModificar = $_POST['numexp'];
 
 foreach ($ALUMNOS as $numExp => $fila) {
-	if ($expAModificar == $numExp){
+	if ($expModificar == $numExp){
 		$existe = true;
 	}
 }
-
-
 
 //-> SI sí existe: Modificar sus datos.
 if ($existe){
 	echo "<p>Número de expediente -> " .$_POST['numexp']. "</p><p>Nota nueva de matemáticas -> " .$_POST['notmat']. "</p><p>Nota nueva de física -> ".$_POST['notfis']."</p>";
 
 	//CAMBIAMOS EXPEDIENTE:
+	//primero matemáticas
+	$ALUMNOS[$expModificar]['notaMates'] = $_POST['notmat'];
+	$ALUMNOS[$expModificar]['notaFisica'] = $_POST['notfis'];
+	//GUARDAMOS LAS MODIFICACIONES:
+	$alumnos = serialize($ALUMNOS);
+	file_put_contents("tablasAlumnos.txt",$alumnos);
 
-
-
-}
-else {
+} else {
 	//-> Si no existe, ese alumno no existe.
 	echo "<p>El expediente ".$_POST['numexp']." no existe.</p>";
 }

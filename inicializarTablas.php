@@ -11,12 +11,12 @@
         1 => array("usuario" =>"ana", "clave" => 2406)
     );
 
-
-
 //Guardar tabla de Alumnos
+//para cargar los datos del array hay que convertirlo en cadena el array primero
+$alumnos = serialize($ALUMNOS);
+file_put_contents("tablasAlumnos.txt",$alumnos);
 
-
-
-//Guardar tabla de Usuarios.
-
+//Guardar tabla de Usuarios
+$usuarios = serialize($USUARIOS);
+file_put_contents("tablasUsuarios.txt",$usuarios);
 ?>

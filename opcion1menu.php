@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,13 +20,11 @@
 //iniciamos sesión:
     session_start();
 ?>
-
 <body background='fondo3.jpg'>
     <header>
-
         <?php
-    echo "<div style='filter:alpha(opacity=20); opacity:0.6;background:white;color:black;'><p>Usuario: " .$_SESSION['nombre']. "</p> <p>Hora de acceso: " /*.$_SESSION['fecha']*/. "</p></div>";
-    ?>
+            echo "<div style='filter:alpha(opacity=20); opacity:0.6;background:white;color:black;'><p>Usuario: " .$_SESSION['nombre']. "</p> <p>Hora de acceso: " /*.$_SESSION['fecha']*/. "</p></div>";
+        ?>
     </header>
     <h2>Escoge el curso que está actualmente cursando</h2>
     <form action="respuestaopcion1.php" method="POST">
@@ -49,5 +46,4 @@
         <input id="boton" type="reset" value="Borrar">
     </form>
 </body>
-
 </html>

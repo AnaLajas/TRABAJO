@@ -1,9 +1,11 @@
 <?php
-//Cargar las tablas de un fichero
+//Cargar las tablas de un fichero:
 //Cargamos alumnos:
-    $ALUMNOS;
+    $alumnos = file_get_contents("tablasAlumnos.txt");
+    $ALUMNOS = unserialize($alumnos);
 
 
 //Cargar usuarios:
-    $USUARIOS;
+    $usuarios = file_get_contents("tablasUsuarios.txt");
+    $USUARIOS = unserialize($usuarios);
 ?>
