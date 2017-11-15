@@ -15,8 +15,18 @@
 //para cargar los datos del array hay que convertirlo en cadena el array primero
 $alumnos = serialize($ALUMNOS);
 file_put_contents("tablasAlumnos.txt",$alumnos);
+echo "<p>El fichero \"tablasAlumnos.txt\" con la tabla de los alumnos ha sido creado</p>";
+
 
 //Guardar tabla de Usuarios
 $usuarios = serialize($USUARIOS);
 file_put_contents("tablasUsuarios.txt",$usuarios);
+echo "<p>El fichero \"tablasUsuarios.txt\" con la tabla de los usuarios ha sido creado</p>";
+
+
+
+
+
+
 ?>
+
