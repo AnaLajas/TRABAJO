@@ -12,12 +12,19 @@
     session_start();
 ?>
 <body background='fondo3.jpg'>
+    <!-- cabecera -->
     <header>
         <?php
             echo "<header><div style='filter:alpha(opacity=20); opacity:0.6;background:white;color:black;'><p>El usuario: " .$_SESSION['nombre']. " , ha accedido: " /*.$_SESSION['fecha']*/. "</p></div></header>";
         ?>
     </header>
+    <!-- contenedor -->
+    <div style="text-align:center; border: 2px solid black; border-radius: 8px; background-color:white; width:500px; height:300px; margin:100px auto; ">
     <h2>Listado de usuarios:</h2>
-    <a href="principal.php">Volver</a>
+    </div>
+    <!-- enlace para volver a la página principal -->
+    <div style="text-align:center">
+        <a href= "principal.php"><button style="padding: 4px; border-radius: 3px; background-color: #F2F3F4;">Volver</button></a>
+    </div>   
 </body>
 </html>

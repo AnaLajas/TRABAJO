@@ -31,13 +31,13 @@
             <legend>Curso: </legend>
 
             <label for="curso">Primero</label>
-            <input type="radio" name="curso" value="1">
+            <input type="radio" name="curso" value="1º">
 
             <label for="curso">Segundo</label>
-            <input type="radio" name="curso" value="2" checked>
+            <input type="radio" name="curso" value="2º" checked>
 
             <label for="curso">Tercero</label>
-            <input type="radio" name="curso" value "3">
+            <input type="radio" name="curso" value "3º">
 
         </fieldset>
         <br>
