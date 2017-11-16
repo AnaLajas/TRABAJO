@@ -7,8 +7,11 @@
 		session_start();
 		include "tablas.php";
 		/* cabecera */
-		echo "<a href= 'login.html'><input type='button' id='boton' value='Cerrar sesión' style='padding: 8px; color: white; background: #17202A; border-radius: 4px; float:right;'></input></a>";
-		echo "<header><div style='filter:alpha(opacity=20); opacity:0.6;background:white;color:black;'><p style='margin:0 auto;'>El usuario: " .$_SESSION['nombre']. "<p style='margin:0 auto;'>Acceso: " .$_SESSION['fecha']. "</p></div></header>";
+        include "header.php";
+ 
+
+
+
 		echo "<div style='text-align:center; border: 2px solid black; border-radius: 8px; background-color:white; width:350px; height:200px; margin:100px auto; '>";
 		
 		/* datos - Si existe el expediente, lo modifico */

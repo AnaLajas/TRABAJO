@@ -13,12 +13,9 @@
 ?>
 <body background='fondo3.jpg'>
     <!-- cabecera -->
-    <header>
-        <?php
-            echo "<a href= 'login.html'><input type='button' id='boton' value='Cerrar sesión' style='padding: 8px; color: white; background: #17202A; border-radius: 4px; float:right;'></input></a>";            
-            echo "<header><div style='filter:alpha(opacity=20); opacity:0.6;background:white;color:black;'><p style='margin:0 auto;'>El usuario: " .$_SESSION['nombre']. "<p style='margin:0 auto;'>Acceso: " .$_SESSION['fecha']. "</p></div></header>";           
-        ?>
-    </header>
+    <?php
+        include "header.php";
+    ?>
     <!-- contenedor -->
     <div style="text-align:center; border: 2px solid black; border-radius: 8px; background-color:white; width:500px; height:300px; margin:100px auto; ">
     <h2>Listado de usuarios:</h2>
@@ -36,7 +33,7 @@
     $USUARIOS = array_reverse($USUARIOS);
     //pintar por pantalla la fecha del último acceso:
     foreach ($USUARIOS as $key => $fila) {
-        echo "<h4>" .$fila['usuario'] ." accedió ". $fila['acceso'].date('d/m/Y')."</h4>";
+        echo "<h4>" .$fila['usuario'] ." accedió ".date('d/m/Y : H:i:s',$fila['acceso'])."</h4>";
     }
     ?>
     </div>

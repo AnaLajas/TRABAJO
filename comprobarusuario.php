@@ -36,14 +36,13 @@ function comprobarDatos($usuario,$clave,$USUARIOS){
 				session_start();
 				$_SESSION['nombre']=$usuario;
 				//ver última fecha de acceso:
-				$_SESSION['fecha']=$fila['acceso'];
+				$_SESSION['fecha']=time();
 				//una vez hecho login, guardaremos la fecha de acceso del mismo:
 				$acceso = time();
 				$fila["acceso"] = $acceso;
 				$usuarioCadena = serialize($USUARIOS);
 				file_put_contents("tablasUsuarios.txt",$usuarioCadena);
-				//crear una cookie con la fecha
-			    setcookie("fecha", date("d/m/Y H:i:s"), time()+3600);
+				//Automáticamente al llegar a esta línea me redirijo a "principal.php"
 				header('Location: principal.php');
 			}
 		}

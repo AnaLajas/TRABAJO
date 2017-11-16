@@ -19,12 +19,9 @@
 ?>
     <body background='fondo3.jpg'>
     <!-- cabecera -->
-    <header>
         <?php
-            echo "<a href= 'login.html'><input type='button' id='boton' value='Cerrar sesión' style='padding: 8px; color: white; background: #17202A; border-radius: 4px; float:right;'></input></a>";            
-            echo "<header><div style='filter:alpha(opacity=20); opacity:0.6;background:white;color:black;'><p style='margin:0 auto;'>El usuario: " .$_SESSION['nombre']. "<p style='margin:0 auto;'>Acceso: " .$_SESSION['fecha']. "</p></div></header>";           
+            include "header.php";
         ?>
-    </header>
         <h2>Realiza las modificaciones correspondientes a las notas</h2>
         <!-- formulario -->
         <form action="respuestaopcion3.php" method="POST">

@@ -22,12 +22,9 @@
 ?>
 <body background='fondo3.jpg'>
     <!-- cabecera -->
-    <header>
-        <?php
-            echo "<a href= 'login.html'><input type='button' id='boton' value='Cerrar sesión' style='padding: 8px; color: white; background: #17202A; border-radius: 4px; float:right;'></input></a>";            
-            echo "<div style='filter:alpha(opacity=20); opacity:0.6;background:white;color:black;'><p>Usuario: " .$_SESSION['nombre']. "</p> <p>Acceso: " .$_SESSION['fecha']. "</p></div>";
-        ?>
-    </header>
+    <?php
+        include "header.php";
+    ?>
     <h2>Escoge el curso que está actualmente cursando</h2>
     <!-- formulario -->
     <form action="respuestaopcion1.php" method="POST">
