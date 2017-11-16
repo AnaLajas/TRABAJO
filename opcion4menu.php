@@ -18,7 +18,7 @@
     ?>
     <!-- contenedor -->
     <div style="text-align:center; border: 2px solid black; border-radius: 8px; background-color:white; width:500px; height:300px; margin:100px auto; ">
-    <h2>Listado de usuarios:</h2>
+    <h2>Listado de usuarios que han accedido:</h2>
     <?php
     //funcion para ordenar un array (el array de primera dimension $USUARIOS):
     //puede devolver valores positivos, negativos y 0:
@@ -33,7 +33,7 @@
     $USUARIOS = array_reverse($USUARIOS);
     //pintar por pantalla la fecha del último acceso:
     foreach ($USUARIOS as $key => $fila) {
-        echo "<h4>" .$fila['usuario'] ." accedió ".date('d/m/Y : H:i:s',
+        echo "<h4>" .$fila['usuario'] ." -> ".date('d/m/Y - H:i:s',
             $fila['acceso'])."</h4>";
     }
     ?>

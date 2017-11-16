@@ -9,7 +9,6 @@
         </style>
     </head>
     <body background="fondo3.jpg">  
-    
         <?php
             session_start();
             include "tablas.php";    
@@ -17,18 +16,15 @@
             /* Cabecera */
             include "header.php";
 
-
             /* recorrer los cursos y pintar nombre y notas de los alumnos */
             echo "<div style='text-align:center; border: 2px solid black; border-radius: 8px; background-color:white; width:500px; height:300px; margin:100px auto; '>";
             echo "<h2>Listado de los alumnos que están cursando: " .$_POST['curso']. "</h2>";
-
-            //HE CAMBIADO ESTE FOR POR UN FOREACH!!!!!!!!!!!!!!!!!!!!!!!
             foreach ($ALUMNOS as $key => $fila) {
                 if ($fila['curso'] == $_POST['curso']) {
                     echo "<h4>Nombre alumno: -> ".$fila['nombre']."</h4>";
                     echo "<h4>Nota matemáticas -> " .$fila['notaMates']. "</h4>";
                     echo "<h4>Nota física -> " .$fila['notaFisica']. "</h4>";
-                }
+                } 
             }
             echo"</div>";
             echo"<br>";

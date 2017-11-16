@@ -13,8 +13,7 @@ include "tablas.php";
 //Si el usuario existe (es decir, coincide con $usuario):
 function comprobarDatos($usuario,$clave,$USUARIOS){
 	$usuarioEncontrado = false;	
-	
-	//HE HECHO ESTE FOREACH!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 	foreach ($USUARIOS as $key => $fila) {
 		if ($usuario == $fila["usuario"]){
 			/* contenedor */
@@ -23,14 +22,13 @@ function comprobarDatos($usuario,$clave,$USUARIOS){
 			$usuarioEncontrado = true;
 			if ($clave != $fila["clave"]){
 				/* contenedor */ 
-				echo"<h3 style='color:#A93226;'>¡La contraseña introducida es INCORRECTA!</h3>";
+				echo"<h3 style='color:#A93226;'>¡La clave introducida es INCORRECTA!</h3>";
 				echo "</div>";
 				/* enlace para volver al login */
 				echo "<div style='text-align:center;'>";
 				echo "<a href= 'login.html'><button style='padding: 4px; border-radius: 3px; background-color: #F2F3F4;'>Volver</button></a>";
 				echo"</div>";
-				} 
-			else {
+				} else {
 				echo"<p>Adelante, los datos introducidos son correctos</p>";
 				//ahora iniciaría sesión y le llevaríamos a otra página (principal):
 				//iniciamos la sesión:

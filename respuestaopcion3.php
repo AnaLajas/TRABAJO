@@ -9,11 +9,7 @@
 		/* cabecera */
         include "header.php";
  
-
-
-
-		echo "<div style='text-align:center; border: 2px solid black; border-radius: 8px; background-color:white; width:350px; height:200px; margin:100px auto; '>";
-		
+		echo "<div style='text-align:center; border: 2px solid black; border-radius: 8px; background-color:white; width:350px; height:200px; margin:100px auto; '>";		
 		/* datos - Si existe el expediente, lo modifico */
 		// 1)Comprobar si existe el alumno con ese expediente
 		$existe=false;

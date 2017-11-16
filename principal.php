@@ -78,8 +78,6 @@
     <?php
         include "header.php";
     ?>
-
-
     <h1>Menú principal</h1>
     <!-- opciones del menú -->
     <div id="contenedor">
