@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +8,7 @@
     <style>
         #boton {
             float: right;
-            padding: 3px;
+            padding: 5px;
             border-radius: 4px;
         }
     </style>
@@ -18,14 +17,16 @@
 //iniciamos sesión:
     session_start();
 ?>
-
     <body background='fondo3.jpg'>
+    <!-- cabecera -->
     <header>
         <?php
-            echo "<header><div style='filter:alpha(opacity=20); opacity:0.6;background:white;color:black;'><p style='margin:0 auto;'>El usuario: " .$_SESSION['nombre']. "<p style='margin:0 auto;'>Hora de acceso: " /*.$_SESSION['fecha']*/. "</p></div></header>";           
+            echo "<a href= 'login.html'><input type='button' id='boton' value='Cerrar sesión' style='padding: 8px; color: white; background: #17202A; border-radius: 4px; float:right;'></input></a>";            
+            echo "<header><div style='filter:alpha(opacity=20); opacity:0.6;background:white;color:black;'><p style='margin:0 auto;'>El usuario: " .$_SESSION['nombre']. "<p style='margin:0 auto;'>Acceso: " .$_SESSION['fecha']. "</p></div></header>";           
         ?>
     </header>
         <h2>Realiza las modificaciones correspondientes a las notas</h2>
+        <!-- formulario -->
         <form action="respuestaopcion3.php" method="POST">
             <fieldset>
                 <legend>Cambios: </legend>
@@ -38,9 +39,9 @@
                     <input type="text" id="notfis" name="notfis" value="" maxlength="5" size="15">
             </fieldset>
             <br>
+            <!-- botones -->
             <input id="boton" type="submit" value="Modificar">
-            <a href= 'principal.php'><button id="boton">Volver</button></a>
+            <a href= 'principal.php'><input type="button" id="boton" value="Volver"></input></a>
         </form>
     </body>
-
 </html>

@@ -6,20 +6,22 @@
 //Si no lo has encontrado:
 //Muestres mensaje
 
-
+//incluimos las tablas:
 include "tablas.php";
 
 //FUNCIÓN:
 //Si el usuario existe (es decir, coincide con $usuario):
 function comprobarDatos($usuario,$clave,$USUARIOS){
 	$usuarioEncontrado = false;	
-	for($indice=0; $indice<count($USUARIOS); $indice++){
-		if ($usuario == $USUARIOS[$indice]["usuario"]){
+	
+	//HE HECHO ESTE FOREACH!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	foreach ($USUARIOS as $key => $fila) {
+		if ($usuario == $fila["usuario"]){
 			/* contenedor */
 			echo "<div style='text-align:center; background-color:#D5DBDB; margin: 200px auto;width:300px; height: 120px; border: 2px solid black; border-radius:6px;'>";
 			echo "<h3 style='color:#17202A;'>Usuario registrado</h3>";
 			$usuarioEncontrado = true;
-			if ($clave != $USUARIOS[$indice]["clave"]){
+			if ($clave != $fila["clave"]){
 				/* contenedor */ 
 				echo"<h3 style='color:#A93226;'>¡La contraseña introducida es INCORRECTA!</h3>";
 				echo "</div>";
@@ -27,12 +29,19 @@ function comprobarDatos($usuario,$clave,$USUARIOS){
 				echo "<div style='text-align:center;'>";
 				echo "<a href= 'login.html'><button style='padding: 4px; border-radius: 3px; background-color: #F2F3F4;'>Volver</button></a>";
 				echo"</div>";
-			} else {
+				} else {
 				echo"<p>Adelante, los datos introducidos son correctos</p>";
 				//ahora iniciaría sesión y le llevaríamos a otra página (principal):
 				//iniciamos la sesión:
 				session_start();
 				$_SESSION['nombre']=$usuario;
+				//ver última fecha de acceso:
+				$_SESSION['fecha']=$fila['acceso'];
+				//una vez hecho login, guardaremos la fecha de acceso del mismo:
+				$acceso = time();
+				$fila["acceso"] = $acceso;
+				$usuarioCadena = serialize($USUARIOS);
+				file_put_contents("tablasUsuarios.txt",$usuarioCadena);
 				//crear una cookie con la fecha
 			    setcookie("fecha", date("d/m/Y H:i:s"), time()+3600);
 				header('Location: principal.php');
@@ -50,9 +59,9 @@ function comprobarDatos($usuario,$clave,$USUARIOS){
 		echo"</div>";
 	}	
 }
-// Comprobamos que los datos del formulario sean correctos:
+// comprobamos que los datos del formulario sean correctos:
 $usuario = $_POST['usuario'];
 $pass = $_POST['clave'];
-// Llamamos a la función:		
+// llamamos a la función:		
 comprobarDatos ($usuario,$pass,$USUARIOS);
 ?>

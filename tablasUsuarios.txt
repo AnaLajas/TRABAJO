@@ -1,0 +1,1 @@
+a:2:{i:0;a:3:{s:7:"usuario";s:5:"jesus";s:5:"clave";i:4444;s:6:"acceso";i:0;}i:1;a:3:{s:7:"usuario";s:3:"ana";s:5:"clave";i:2406;s:6:"acceso";i:0;}}

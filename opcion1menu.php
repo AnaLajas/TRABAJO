@@ -8,7 +8,7 @@
     <style>
         #boton {
             float: right;
-            padding: 3px;
+            padding: 5px;
             border-radius: 4px;
         }
         p {
@@ -21,29 +21,29 @@
     session_start();
 ?>
 <body background='fondo3.jpg'>
+    <!-- cabecera -->
     <header>
         <?php
-            echo "<div style='filter:alpha(opacity=20); opacity:0.6;background:white;color:black;'><p>Usuario: " .$_SESSION['nombre']. "</p> <p>Hora de acceso: " /*.$_SESSION['fecha']*/. "</p></div>";
+            echo "<a href= 'login.html'><input type='button' id='boton' value='Cerrar sesión' style='padding: 8px; color: white; background: #17202A; border-radius: 4px; float:right;'></input></a>";            
+            echo "<div style='filter:alpha(opacity=20); opacity:0.6;background:white;color:black;'><p>Usuario: " .$_SESSION['nombre']. "</p> <p>Acceso: " .$_SESSION['fecha']. "</p></div>";
         ?>
     </header>
     <h2>Escoge el curso que está actualmente cursando</h2>
+    <!-- formulario -->
     <form action="respuestaopcion1.php" method="POST">
         <fieldset>
             <legend>Curso: </legend>
-
             <label for="curso">Primero</label>
             <input type="radio" name="curso" value="1º">
-
             <label for="curso">Segundo</label>
             <input type="radio" name="curso" value="2º" checked>
-
             <label for="curso">Tercero</label>
             <input type="radio" name="curso" value "3º">
-
         </fieldset>
         <br>
+        <!-- botones -->
         <input id="boton" type="submit" value="Enviar">
-        <a href= 'principal.php'><button id="boton">Volver</button></a>
+        <a href= 'principal.php'><input type="button" id="boton" value="Volver"></input></a>
     </form>
 </body>
 </html>
