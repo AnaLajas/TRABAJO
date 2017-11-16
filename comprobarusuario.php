@@ -29,7 +29,8 @@ function comprobarDatos($usuario,$clave,$USUARIOS){
 				echo "<div style='text-align:center;'>";
 				echo "<a href= 'login.html'><button style='padding: 4px; border-radius: 3px; background-color: #F2F3F4;'>Volver</button></a>";
 				echo"</div>";
-				} else {
+				} 
+			else {
 				echo"<p>Adelante, los datos introducidos son correctos</p>";
 				//ahora iniciaría sesión y le llevaríamos a otra página (principal):
 				//iniciamos la sesión:
@@ -39,7 +40,7 @@ function comprobarDatos($usuario,$clave,$USUARIOS){
 				$_SESSION['fecha']=time();
 				//una vez hecho login, guardaremos la fecha de acceso del mismo:
 				$acceso = time();
-				$fila["acceso"] = $acceso;
+				$USUARIOS[$key]["acceso"] = $acceso;
 				$usuarioCadena = serialize($USUARIOS);
 				file_put_contents("tablasUsuarios.txt",$usuarioCadena);
 				//Automáticamente al llegar a esta línea me redirijo a "principal.php"

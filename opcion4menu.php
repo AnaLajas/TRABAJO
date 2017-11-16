@@ -33,7 +33,8 @@
     $USUARIOS = array_reverse($USUARIOS);
     //pintar por pantalla la fecha del último acceso:
     foreach ($USUARIOS as $key => $fila) {
-        echo "<h4>" .$fila['usuario'] ." accedió ".date('d/m/Y : H:i:s',$fila['acceso'])."</h4>";
+        echo "<h4>" .$fila['usuario'] ." accedió ".date('d/m/Y : H:i:s',
+            $fila['acceso'])."</h4>";
     }
     ?>
     </div>
