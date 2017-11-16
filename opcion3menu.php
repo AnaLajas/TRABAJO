@@ -22,7 +22,7 @@
     <body background='fondo3.jpg'>
     <header>
         <?php
-            echo "<header><div style='filter:alpha(opacity=20); opacity:0.6;background:white;color:black;'><p>El usuario: " .$_SESSION['nombre']. " , ha accedido: " /*.$_SESSION['fecha']*/. "</p></div></header>";
+            echo "<header><div style='filter:alpha(opacity=20); opacity:0.6;background:white;color:black;'><p style='margin:0 auto;'>El usuario: " .$_SESSION['nombre']. "<p style='margin:0 auto;'>Hora de acceso: " /*.$_SESSION['fecha']*/. "</p></div></header>";           
         ?>
     </header>
         <h2>Realiza las modificaciones correspondientes a las notas</h2>
@@ -39,7 +39,7 @@
             </fieldset>
             <br>
             <input id="boton" type="submit" value="Modificar">
-            <input id="boton" type="reset" value="Borrar">
+            <a href= 'principal.php'><button id="boton">Volver</button></a>
         </form>
     </body>
 

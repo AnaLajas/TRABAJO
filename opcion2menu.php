@@ -18,7 +18,7 @@
 
     <body background='fondo3.jpg'>
         <?php
-            echo "<header><div style='filter:alpha(opacity=20); opacity:0.6;background:white;color:black;'><p>El usuario: " .$_SESSION['nombre']. " , ha accedido: " /*.$_SESSION['fecha']*/. "</p></div></header>";
+            echo "<header><div style='filter:alpha(opacity=20); opacity:0.6;background:white;color:black;'><p style='margin:0 auto;'>El usuario: " .$_SESSION['nombre']. "<p style='margin:0 auto;'>Hora de acceso: " /*.$_SESSION['fecha']*/. "</p></div></header>";
         ?>
         <div style='text-align:center; border: 2px solid black; border-radius: 8px; background-color:white; width:500px; height:400px; margin:100px auto; '>
             <h2>Las notas medias de cada curso son las siguientes</h2>

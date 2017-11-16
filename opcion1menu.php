@@ -43,7 +43,7 @@
         </fieldset>
         <br>
         <input id="boton" type="submit" value="Enviar">
-        <input id="boton" type="reset" value="Borrar">
+        <a href= 'principal.php'><button id="boton">Volver</button></a>
     </form>
 </body>
 </html>
