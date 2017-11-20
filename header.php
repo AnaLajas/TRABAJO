@@ -6,7 +6,7 @@
             ?>
         </div>
         <div id="Boton" style=";float:right">
-            <a href="login.html"><button  id='boton'  style='padding: 8px; color: white; background: #17202A; border-radius: 4px;'>Cerrar sesión</button></a>
+            <a href="login.html"><button  id='boton'  style='padding: 8px; color: white; background: #17202A; border-radius: 4px; cursor:pointer'>Cerrar sesión</button></a>
         </div> 
         
     </div>

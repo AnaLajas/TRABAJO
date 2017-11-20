@@ -17,12 +17,11 @@ function comprobarDatos($usuario,$clave,$USUARIOS){
 	foreach ($USUARIOS as $key => $fila) {
 		if ($usuario == $fila["usuario"]){
 			/* contenedor */
-			echo "<div style='text-align:center; background-color:#D5DBDB; margin: 200px auto;width:300px; height: 120px; border: 2px solid black; border-radius:6px;'>";
-			echo "<h3 style='color:#17202A;'>Usuario registrado</h3>";
+			echo "<div style='text-align:center; background-color:#D5DBDB; margin: 200px auto;width:300px; height: 80px; border: 2px solid black; border-radius:6px;'>";
 			$usuarioEncontrado = true;
 			if ($clave != $fila["clave"]){
 				/* contenedor */ 
-				echo"<h3 style='color:#A93226;'>¡La clave introducida es INCORRECTA!</h3>";
+				echo"<h3 style='color:#A93226;'>¡La clave o usuario introducida es INCORRECTA!</h3>";
 				echo "</div>";
 				/* enlace para volver al login */
 				echo "<div style='text-align:center;'>";

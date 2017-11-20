@@ -1,1 +1,1 @@
-a:2:{i:0;a:4:{s:6:"nombre";s:6:"Jesús";s:5:"curso";i:1;s:9:"notaMates";i:8;s:10:"notaFisica";i:6;}i:1;a:4:{s:6:"nombre";s:3:"Ana";s:5:"curso";i:2;s:9:"notaMates";i:9;s:10:"notaFisica";i:6;}}
+a:2:{i:0;a:4:{s:6:"nombre";s:6:"Jesús";s:5:"curso";i:1;s:9:"notaMates";i:8;s:10:"notaFisica";i:6;}i:1;a:4:{s:6:"nombre";s:3:"Ana";s:5:"curso";i:2;s:9:"notaMates";s:1:"1";s:10:"notaFisica";s:1:"1";}}

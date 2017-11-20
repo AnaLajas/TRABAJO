@@ -9,7 +9,7 @@
 		/* cabecera */
         include "header.php";
  
-		echo "<div style='text-align:center; border: 2px solid black; border-radius: 8px; background-color:white; width:350px; height:200px; margin:100px auto; '>";		
+		echo "<div style='text-align:center; border: 2px solid black; border-radius: 8px; background-color:white; width:350px; height:250px; margin:100px auto; '>";		
 		/* datos - Si existe el expediente, lo modifico */
 		// 1)Comprobar si existe el alumno con ese expediente
 		$existe=false;
@@ -35,7 +35,9 @@
 			} else {
 				echo "<h2 style='color:#A93226; margin-top:90px;'>¡El expediente  ".$_POST['numexp']."  no existe!</2>";
 		}
-		
+		echo"<br>";
+		//poner un mensaje aquí:
+		echo "<p style='text-align:center'>Para ver la nota modificada <a href='opcion1menu.php'>haz click aquí</a></p>";
 		echo "</div>";
 		/* enlace para volver al menú principal */
 		echo "<div style='text-align:center;'>";
